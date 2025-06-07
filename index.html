@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <!-- Adapted from w3schools.com -->
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Portfolio of Iain Morgan, R&D Engineer">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="website_icon.png">
         <title>Iain Morgan</title>
     </head>
-    <body style="background-color:rgba(255, 255, 255, 0.88);">
-        <!-- ====== Navbar Block ====== -->
-        <div class="navbar">
-            <a href="index.html">
-                <i class="fa fa-fw fa-home"></i> Home
-            </a>
-            <div class="dropdown">
-                <button id="dropdownButton" class="dropbtn">
-                    Projects <i class="fa fa-fw fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content" id="myDropdown">
-                    <a href="project1.html">Project 1</a>
-                    <a href="project2.html">Project 2</a>
-                    <a href="project3.html">Project 3</a>
-                </div>
-            </div> 
-            <a href="iain_morgan_resume_generic.pdf" target="_blank">Resume</a>
-            <a href="https://www.linkedin.com/in/iain-a-morgan/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/morgan-iain" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
-        <!-- ====== Navbar Block END ====== -->
-
-        <h1>Iain Morgan</h1>
-        <h3>R&D Engineer | Previously at Terumo Blood and Cell Technologies<h3>
-            
-        <!--Run script for dropdown menu-->
-        <script src="dropdown_script.js"></script>
+    <body>
+        <header>
+            <!-- ====== Navbar Block ====== -->
+            <div class="navbar">
+                <a href="index.html">
+                    <i class="fa fa-fw fa-home"></i> Home
+                </a>
+                <div class="dropdown">
+                    <button id="dropdownButton" class="dropbtn">
+                        Projects <i class="fa fa-fw fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="project1.html">Project 1</a>
+                        <a href="project2.html">Project 2</a>
+                        <a href="project3.html">Project 3</a>
+                    </div>
+                </div> 
+                <a href="iain_morgan_resume_generic.pdf" target="_blank">Resume</a>
+                <a href="https://www.linkedin.com/in/iain-a-morgan/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/morgan-iain" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <!-- ====== Navbar Block END ====== -->
+        </header>
+        <main>
+            <h1>Iain Morgan</h1>
+            <h3>R&D Engineer | Previously at Terumo Blood and Cell Technologies<h3>
+            <!--Run script for dropdown menu-->
+            <script src="dropdown_script.js"></script>
+        </main>
+        <footer>
+            <p>&copy; 2025 Iain Morgan</p>
+        </footer>
     </body>
 </html>
