@@ -68,3 +68,27 @@ body {
 .show {
   display: block;
 }
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  gap: 1.5em; /* spacing between image and text */
+}
+
+.profile-pic {
+  width: auto;
+  height: 4em; /* scales image height to roughly match text height */
+  border-radius: 8px; /* optional: rounded corners */
+}
+
+.profile-text h1,
+.profile-text h3 {
+  margin: 0;
+}
+
+.section-divider {
+  margin-top: 1em;
+  border: none;
+  border-top: 1px solid black;
+}
