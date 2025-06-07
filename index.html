@@ -15,8 +15,8 @@
                 <i class="fa fa-fw fa-home"></i> Home
             </a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction()">Projects
-                    <i class="fa fa-fw fa-caret-down"></i>
+                <button id="dropdownButton" class="dropbtn">
+                    Projects <i class="fa fa-fw fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content" id="myDropdown">
                     <a href="project1.html">Project 1</a>
@@ -36,27 +36,8 @@
 
         <h1>Iain Morgan</h1>
         <h3>R&D Engineer | Previously at Terumo Blood and Cell Technologies<h3>
-
-        <script>
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
-            function myFunction() 
-            {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(e) 
-            {
-                if (!e.target.matches('.dropbtn')) 
-                {
-                    var myDropdown = document.getElementById("myDropdown");
-                        if (myDropdown.classList.contains('show')) 
-                        {
-                            myDropdown.classList.remove('show');
-                        }
-                }
-            }
-        </script>
+            
+        <!--Run script for dropdown menu-->
+        <script src="dropdown_script.js"></script>
     </body>
 </html>
