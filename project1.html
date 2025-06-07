@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project 1</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 2em;
-      max-width: 800px;
-    }
-    nav {
-      margin-bottom: 2em;
-    }
-    nav a {
-      margin-right: 1em;
-      text-decoration: none;
-      color: blue;
-    }
-  </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Project 1</title>
+    </head>
 <body>
-  <h1>Project 1</h1>
+    <!-- ====== Navbar Block ====== -->
+    <div class="navbar">
+        <a href="index.html">
+            <i class="fa fa-fw fa-home"></i> Home
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Projects
+                <i class="fa fa-fw fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="project1.html">Project 1</a>
+                <a href="project2.html">Project 2</a>
+                <a href="project3.html">Project 3</a>
+            </div>
+        </div> 
+        <a href="iain_morgan_resume_generic.pdf" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/iain-a-morgan/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/morgan-iain" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </div>
+    <!-- ====== Navbar Block END ====== -->
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="project1.html">Project 1</a>
-    <a href="project2.html">Project 2</a>
-    <!-- Repeat for other projects -->
-  </nav>
+  <h1>Project 1</h1>
 
   <section>
     <h2>Overview</h2>
@@ -46,5 +51,27 @@
       <li><a href="https://github.com/yourusername/project1">GitHub Repository</a></li>
     </ul>
   </section>
+
+  <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() 
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.dropbtn')) 
+            {
+                var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) 
+                    {
+                        myDropdown.classList.remove('show');
+                    }
+            }
+        }
+    </script>
 </body>
 </html>
