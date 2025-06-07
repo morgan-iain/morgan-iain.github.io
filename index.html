@@ -1,41 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 2em;
-      max-width: 800px;
-    }
-    nav {
-      margin-bottom: 2em;
-    }
-    nav a {
-      margin-right: 1em;
-      text-decoration: none;
-      color: blue;
-    }
-    h1 {
-      margin-top: 0;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to My Portfolio</h1>
+<!-- Adapted from w3schools.com -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.cs">
+        <title>Iain Morgan</title>
+        <style>
+            .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            }
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="project1.html">Project 1</a>
-    <a href="project2.html">Project 2</a>
-    <!-- Add more projects as needed -->
-  </nav>
+            .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm an engineer with a passion for building systems, electronics, and software. This site is a collection of projects I've worked on, with links to more details on each one.</p>
-  </section>
-</body>
+            .dropdown {
+            float: left;
+            overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+            background-color: rgb(0, 85, 255);
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+
+            .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+            .dropdown-content a:hover {
+            background-color: #ddd;
+            }
+
+            .show {
+            display: block;
+            }
+        </style>
+    </head>
+    <body style="background-color:white;">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Dropdown
+                    <i class="fab fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="project1.html">Project 1</a>
+                    <a href="project2.html">Project 2</a>
+                    <a href="project3.html">Project 3</a>
+                </div>
+                <a href="iain_morgan_resume_generic.pdf">Resume</a>
+                <a href="https://www.linkedin.com/in/iain-a-morgan/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/morgan-iain" target="_blank" title="Github">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div> 
+        </div>
+
+        <h3>Iain Morgan</h3>
+        <p>Blah Blah Blah</p>
+
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() 
+            {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) 
+            {
+                if (!e.target.matches('.dropbtn')) 
+                {
+                    var myDropdown = document.getElementById("myDropdown");
+                        if (myDropdown.classList.contains('show')) 
+                        {
+                            myDropdown.classList.remove('show');
+                        }
+                }
+            }
+        </script>
+    </body>
 </html>
