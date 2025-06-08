@@ -75,6 +75,11 @@ body {
   display: block;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-header {
   display: flex;
   align-items: center;
@@ -97,10 +102,4 @@ body {
   margin-top: 1em;
   border: none;
   border-top: 1px solid black;
-}
-
-#myDropdown {
-  display: block !important;
-  background-color: yellow !important;
-  border: 1px solid red;
 }
