@@ -26,6 +26,7 @@ body {
   overflow: hidden;
   position: relative;         /* anchor dropdown-content */
   display: inline-block;      /* let it size to the button */
+  z-index: 9999;
 }
 
 .dropdown .dropbtn {
@@ -54,7 +55,7 @@ body {
   background-color: rgba(221, 221, 221, 0.88);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .dropdown-content a {
