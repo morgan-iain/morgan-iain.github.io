@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdown = document.getElementById("myDropdown");
 
   button.addEventListener("click", function (e) {
+    console.log("Button clicked");
     e.stopPropagation(); // prevent closing immediately
     dropdown.classList.toggle("show");
   });
