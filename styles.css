@@ -6,6 +6,7 @@ body {
 .navbar {
   background-color: #333;
   position: relative;
+  flex-wrap: wrap;
   z-index: 10;
   display: flex;
   gap: 1em;
@@ -23,6 +24,10 @@ body {
   border: none;
   cursor: pointer;
   font-family: inherit;
+  white-space: nowrap;    /* keep words together */
+  overflow: hidden;       /* prevent spillover */
+  text-overflow: ellipsis; /* show "..." if it's too long */
+  max-width: 100%;
 }
 
 .navbar a:hover,
