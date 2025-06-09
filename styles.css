@@ -78,7 +78,7 @@ body {
   display: block;
 }
 
-/* Optional: arrow styling */
+/* arrow styling */
 .arrow {
   float: right;
   font-size: 12px;
@@ -86,20 +86,40 @@ body {
   color: #555;
 }
 
-/* Optional: tidy up second-level links */
+/* tidy up second-level links */
 .sub-dropdown-content a {
   padding: 10px 16px;
   display: block;
   text-decoration: none;
   color: black;
 }
-/* */
+
 .sub-dropdown-content a:hover {
   background-color: #ddd;
 }
-/* */
+
 .show {
   display: block;
+}
+
+/* Make page take up full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* The flex container that holds the whole page layout */
+.page-container {
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  min-height: 100vh; /* At least full height of the viewport */
+}
+
+/* Make main expand to push footer down when there's little content */
+main {
+  flex: 1;
 }
 
 .profile-header {
@@ -130,3 +150,4 @@ footer {
   text-align: center;
   color:rgb(171, 171, 172)
 }
+
