@@ -51,6 +51,18 @@
     <main>
         <h1>SmartFrame on Raspberry Pi 4</h1>
         <img src="SmartFrame_Layout.png" alt="SmartFrame_Layout" class="SmartFrame-layout-pic" />
+        <h4>Features</h4>
+        <ul>
+          <li>Full-screen slideshow with cross-fading transitions between images</li>
+          <li>Auto-start the slideshow on power-up of Raspberry Pi screen</li>
+          <li>SAMBA server hosted on Raspberry Pi to enable easy, wireless transfer of image files from iPhone to SmartFrame without a 3rd party app</li>
+          <li>Files are automatically stored on a 256 GB USB drive to ensure adequate space</li>
+          <li>Ability to cleanly exit slideshow via ssh on an external computer to simplify software updates</li>
+          <li>Detailed logging information in the event of bugs or corrupt/invalid images</li>
+          <li>Slideshow reshuffles everytime the frame is turned on so that the order of images is never the same</li>
+          <li>New photos added while slideshow is running will get added to the end of the current slideshow, but will then get shuffled into the slideshow after a power cycle</li>
+          <li>Slideshow is built on powerful Python library called OpenCV, so the sky is the limit with customization</li>
+        </ul>
     </main>
 
     <footer>
