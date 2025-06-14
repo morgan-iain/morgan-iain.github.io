@@ -49,7 +49,40 @@
     </header>
 
     <main>
-      <h1>Project 2 Here</h1>
+      <h1>Heart Rate Monitor</h1>
+      <h4>Project Architecture (High-Level)</h4>
+      <ul>
+        <li>Sensor: MAX30102 PPG</li>
+        <li>MCU: ESP32-S3-WROOM-1</li>
+        <li>Server: Rapsberry Pi Zero WH</li>
+        <li>CLient Device: External Computer</li>
+      </ul>
+      <h5>Sensor Choice</h5>
+        <p>Choice between this and analog sensors, but analog sensors seemed to be more plug and play so digital sensor provides opportunity for more low level work.</p>
+      <h5>MCU Choice</h5>
+        <p>Choice between this, STM32 MCU, RPi Pico, and just going straight to RPi Zero. STM32 does not have BLE/Wi-Fi chip, so would need additional module and more
+           complex software to drive it. RPi Pico was compelling. Going straight to RPi Zero would have made it hard to allow PPG Sensor & MCU peripheral device to be 
+           battery powered standalone device due to higher power consumption. ESP32 has higher power consumption than the STM32, but hopefully still low enough to be 
+           battery powered using some kind of rechargeable Li-Ion battery that would last ~ 2 hours in hand held size device. </p>
+        <ul>
+          <li>Operating using freeRTOS and running two primary tasks: BLE GATT service and data read/process via I2C from MAX30102</li>
+          <li>BLE Task: [TBD]</li>
+          <li>Data Read/Process Task: Read raw data from MAX30102, process data to convert to heart rate and blood oxygen %, make data availble for BLE Task</li>
+        </ul>
+      <h5>Raspberry Pi Zero W</h5>
+        <p>Cheaper than full blown RPi 4 or 5, which also would have been major overkill for just serving a webpage with limited front end and back end requirements. 
+          It is also small and I wanted to try out a fully headless unit to keep sharpening Linux skills. </p>
+        <ul>
+          <li>Serve web page using Apache</li>
+          <li>Front end: HTML and JavaScript with Chart.JS for creating graph on the web page</li>
+          <li>Backend: Python BLE client using bleak and Flask used for server-side logic for web-page</li>
+          <li>Database: [TBD- need to determine use case and then select most relevant DB]</li>
+        </ul>
+      <h5>External Computer</h5>
+          <p>Used to access local web page served by RPi to visualize real-time data from PPG sensor. Essentially acts as a head unit for RPi without actually needing 
+            a screen for the RPi. Also more reflective of the tech stack used in industry for an IoT device like this. </p>
+      <h2>[Project In Progress]</h2>
+      
     </main>
 
     <footer>
