@@ -127,45 +127,8 @@ main {
   flex: 1;
 }
 
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-top: 2em;
-  gap: 1.5em;
-}
-
-.profile-pic {
-  height: 8em;
-  border-radius: 8px;
-}
-
-.profile-text h1,
-.profile-text h3 {
-  margin: 0;
-}
-
-.section-divider {
-  margin-top: 1em;
-  border: none;
-  border-top: 1px solid black;
-}
-
 footer {
   margin-top: 2em;
   text-align: center;
   color:rgb(171, 171, 172)
-}
-
-.SmartFrame-layout-pic {
-  max-width: 100%;
-  height: auto;
-}
-
-.FSH-poster-pic {
-  max-width: 100%;
-  height: auto;
-}
-.ReinfusionModule-poster-pic {
-  max-width: 100%;
-  height: auto;
 }
