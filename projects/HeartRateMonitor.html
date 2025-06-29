@@ -30,12 +30,16 @@
         <li>CLient Device: External Computer</li>
       </ul>
       <h5>Sensor Choice</h5>
-        <p>Choice between this and analog sensors, but analog sensors seemed to be more plug and play so digital sensor provides opportunity for more low level work.</p>
+        <p>MAX30102 Sensor has an on-board ADC to convert analog signals from photodiode to digital signals that can be output via I2C. This is a good choice for this project
+          since I won't need to implement an ADC for a purely analog sensor, but I'll also be able to do low-level programming work to read digital data from the sensor via I2C. 
+          The MAX30102 also supports 3.3V logic, which is necessary with an ESP32 dev board.
+        </p>
       <h5>MCU Choice</h5>
-        <p>Choice between this, STM32 MCU, RPi Pico, and just going straight to RPi Zero. STM32 does not have BLE/Wi-Fi chip, so would need additional module and more
-           complex software to drive it. RPi Pico was compelling. Going straight to RPi Zero would have made it hard to allow PPG Sensor & MCU peripheral device to be 
-           battery powered standalone device due to higher power consumption. ESP32 has higher power consumption than the STM32, but hopefully still low enough to be 
-           battery powered using some kind of rechargeable Li-Ion battery that would last ~ 2 hours in hand held size device. </p>
+        <p>Choice between this, STM32 MCU, RPi Pico 2 W, Arduino, and just going straight to RPi Zero. STM32 does not have BLE/Wi-Fi chip natively, so would need additional module and more
+           complex software to drive it. RPi Pico 2 W is compelling as it supports freeRTOS, BLE, and has low power consumption. Going straight to RPi Zero would have made it hard to allow PPG 
+           Sensor & MCU peripheral device to be battery powered standalone device due to higher power consumption. ESP32 has higher power consumption than the STM32, but hopefully still low enough 
+           to be battery powered using some kind of rechargeable Li-Ion battery that would last ~ 2 hours in hand held size device. ESP32 is also a staple in the embedded product world, 
+          so this will give me an introduction to it and necessary considerations in design. Ultimately, ESP32 makes the most sense for the application and my learning goals.</p>
         <ul>
           <li>Operating using freeRTOS and running two primary tasks: BLE GATT service and data read/process via I2C from MAX30102</li>
           <li>BLE Task: [TBD]</li>
@@ -43,7 +47,8 @@
         </ul>
       <h5>Raspberry Pi Zero W</h5>
         <p>Cheaper than full blown RPi 4 or 5, which also would have been major overkill for just serving a webpage with limited front end and back end requirements. 
-          It is also small and I wanted to try out a fully headless unit to keep sharpening Linux skills. </p>
+          However, running a Python-based Flask application could consume a lot of memory, so I'll have to see how the performance is.It is also small and I wanted 
+          to try out a fully headless unit to keep sharpening Linux skills. </p>
         <ul>
           <li>Serve web page using Apache</li>
           <li>Front end: HTML and JavaScript with Chart.JS for creating graph on the web page</li>
